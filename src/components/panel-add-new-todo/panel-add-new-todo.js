@@ -5,7 +5,7 @@ const PanelAddNewTodo = () => {
         <div className="panel-add-new-todo">
            <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="write a new todo"/>
-                <button type="button" class="btn btn-secondary">add</button>
+                <button type="submit" className="btn btn-outline-light">add</button>
             </div>
         </div>
     )

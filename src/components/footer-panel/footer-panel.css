@@ -1,0 +1,10 @@
+.footer-panel{
+    padding: 20px;
+    font-size: 20px;
+    background-color:rgb(243, 183, 192);
+    border-radius: 8px;
+    box-shadow: 15px 5px 30px rgba(241, 112, 112, 0.1);
+    color : #fff;
+    text-align: center;
+    
+}
