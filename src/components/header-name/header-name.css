@@ -1,0 +1,19 @@
+.header-info{
+    padding : 25px;
+    font-size: 20px;
+    background-color:rgb(243, 183, 192);
+    border-radius: 8px;
+    box-shadow: 15px 5px 30px rgba(241, 112, 112, 0.1);
+    color : #fff;
+    text-align: center;
+
+}
+
+.line{
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 230px;
+    height: 5px;
+    background-color: #fff;
+}
