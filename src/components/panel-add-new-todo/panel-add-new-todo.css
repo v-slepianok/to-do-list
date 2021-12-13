@@ -1,19 +1,12 @@
-.panel-add-new-todo{
-    font-size: 20px;
-    background-color:rgb(243, 183, 192);
-    border-radius: 8px;
-    box-shadow: 15px 5px 30px rgba(241, 112, 112, 0.1);
-    color : #fff;
-    text-align: start;
-}
+
 .form-control{
-    font-size: 20px;
-    padding-left: 20px;
+    padding:13px  ;
+    border-radius: 0%;
+    border: 2px solid grey ;
+     
 }
-.btn{
-    font-size: 20px;
-    border-radius: 8px;
-    background-color:rgb(143, 138, 138);
-    color : #fff;
-    text-align: center;
+
+.btn  {
+    border: 2px solid grey ;
+    background-color: rgb(226, 224, 224);
 }
