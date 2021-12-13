@@ -1,10 +1,33 @@
-
-.btn-trash {
-    margin-bottom: 20px;
-    background-color: rgb(197, 195, 197);
-
+.list-group-item {
+    box-sizing: border-box;
+    border :1px solid gray;
+    background-color: rgb(255, 244, 241);
+ 
 }
 
-.list-group-item-label{
-    margin-left: 30px;
+.list-group-item-input {
+    box-sizing: border-box;
+    width: 15px;
+    height :15px;
+}
+
+
+
+.list-group-item button {
+    background-color: rgba(255, 255, 255, 0.986);
+    width: 35px;
+    height: 35px;
+    margin: 6px;
+    font-size: 18px;
+    border:none;
+    cursor: pointer;
+}
+.list-group-item .btn-trash {
+    color: #f16666;
+    border: 1px solid black;
+}
+
+.list-group-item .btn-star{
+    color:rgb(238, 205, 95);
+    border: 1px solid black;  
 }
