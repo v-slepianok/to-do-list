@@ -2,11 +2,25 @@
 .form-control{
     padding:13px  ;
     border-radius: 0%;
-    border: 2px solid grey ;
+    border: 5px solid rgb(135, 103, 177) ;
+    background-color:rgb(255, 255, 255);
+   
+    
      
 }
 
+.form-control:focus{
+    border: 5px solid rgb(179, 245, 238); ; 
+}
+
+
 .btn  {
-    border: 2px solid grey ;
-    background-color: rgb(226, 224, 224);
+    border-radius: 0%;
+    border: 4px solid rgb(135, 103, 177);
+    background-color: rgb(146, 226, 218);
+    font-size: 25px;
+    font-weight: 800;
+    color:rgb(255, 255, 255)
+    
+  
 }
