@@ -31,9 +31,20 @@ class App extends Component{
               
             ]
         }
+        this.maxId = 9;
     }
-    onAddNewTodo = (text) => {
-        console.log(text);
+    onAddNewTodo = (name) => {
+        const newTodo = {
+            name,
+            srar: false,
+            id : this.maxId ++
+        }
+        this.setState(({data}) => {
+            const newArrTodo = [...data, newTodo];
+            return {
+                data : newArrTodo
+            }
+        })
     }
 
     deleteItem = (id) => {
@@ -48,7 +59,8 @@ class App extends Component{
         return(
             <div className="app">
                 <HeaderName/>
-                <PanelAddNewTodo onAddNewTodo={this.onAddNewTodo}/>
+                <PanelAddNewTodo 
+                    onAddNewTodo={this.onAddNewTodo}/>
                 <ToDoList 
                     data={this.state.data}
                     onDelete={this.deleteItem}
