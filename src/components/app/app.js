@@ -5,19 +5,6 @@ import FooterPanel from '../footer-panel/footer-panel';
 import PanelAddNewTodo from '../panel-add-new-todo/panel-add-new-todo';
 import ToDoList from '../to-do-list/to-do-list';
 
-
-
-
-const data = [
-    {name : "книга", star : false, id: 1},
-    {name : "английский", star : false, id: 2},
-    {name : "react", star : false, id: 3},
-    {name : "js", star : false, id: 4},
-    {name : "html", star : false, id: 5},
-    {name : "stretching", star : false, id: 6},
-  
-];
-
 class App extends Component{
     constructor(props){
         super(props);
@@ -32,7 +19,7 @@ class App extends Component{
               
             ]
         }
-        this.maxId = 9;
+        this.maxId = 15;
     }
     onAddNewTodo = (name) => {
         const newTodo = {
@@ -56,6 +43,17 @@ class App extends Component{
         })
     }
 
+    onTogglePriority = (id) => {
+        this.setState(({data}) => ({
+            data : data.map(item => {
+                if(item.id === id){
+                    return {...item, star : !item.star}
+                }
+                return item;
+            })
+        }))
+    }
+  
     render(){
         const tasksCounter = this.state.data.length;
         return(
@@ -66,6 +64,8 @@ class App extends Component{
                 <ToDoList 
                     data={this.state.data}
                     onDelete={this.deleteItem}
+                    onTogglePriority={this.onTogglePriority}
+
                 />
                 <FooterPanel
                 tasksCounter={tasksCounter}/>

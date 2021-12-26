@@ -1,7 +1,7 @@
 .list-group-item {
     box-sizing: border-box;
     border :1px solid gray;
-    background-color: rgb(255, 244, 241);
+    background-color: rgb(255, 246, 245);
  
 }
 
@@ -10,8 +10,6 @@
     width: 15px;
     height :15px;
 }
-
-
 
 .list-group-item button {
     background-color: rgba(255, 255, 255, 0.986);
@@ -29,5 +27,10 @@
 
 .list-group-item .btn-star{
     color:rgb(238, 205, 95);
-    border: 1px solid black;  
+    border: 1px solid black; 
+    padding: 4px; 
+}
+
+.starred {
+    background-color:rgb(252, 242, 212);
 }

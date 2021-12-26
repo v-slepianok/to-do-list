@@ -1,39 +1,21 @@
-import {Component} from 'react';
 import './to-do-list-item.css';
 
-class ToDoListItem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            priority: false,
-            
-        }
-    }
+const ToDoListItem = (props) =>{
+    const {name, onDelete, star, onTogglePriority} = props;
    
-    onAddPriority = () => {
-        this.setState(({priority}) => ({
-            priority : !priority
-        }))
+    let classNames =  "list-group-item d-flex justify-content-between ";
+
+    if(star){
+        classNames += ' starred';
     }
 
-
-    render(){
-        const {name, onDelete} = this.props;
-        const {priority} = this.state;
-
-
-        if(priority){
-           console.log('fjbd');
-        }
-  
-    
     return (
-        <li className="list-group-item d-flex justify-content-between">
+        <li className={classNames}>
              <input type="checkBox" className="list-group-item-input custom-control-input"/>
             <span className="list-group-item-label">{name}</span>
-            <div className=' d-flex justify-content-center align-items-center '>
+            <div className='d-flex justify-content-center align-items-center '>
                 <button type="button"
-                    className="btn-star btn-sm " onClick={this.onAddPriority}>
+                    className="btn-star btn-sm " onClick={onTogglePriority}>
                     <i className="fas fa-star"></i>
                 </button>
 
@@ -45,9 +27,11 @@ class ToDoListItem extends Component {
             </div>
         </li>
     )
+ 
 
 }
+ 
 
-}
+
 
 export default ToDoListItem;
