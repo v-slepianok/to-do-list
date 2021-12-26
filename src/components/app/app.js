@@ -7,6 +7,7 @@ import ToDoList from '../to-do-list/to-do-list';
 
 
 
+
 const data = [
     {name : "книга", star : false, id: 1},
     {name : "английский", star : false, id: 2},
@@ -56,6 +57,7 @@ class App extends Component{
     }
 
     render(){
+        const tasksCounter = this.state.data.length;
         return(
             <div className="app">
                 <HeaderName/>
@@ -65,7 +67,8 @@ class App extends Component{
                     data={this.state.data}
                     onDelete={this.deleteItem}
                 />
-                <FooterPanel/>
+                <FooterPanel
+                tasksCounter={tasksCounter}/>
             </div>
              
         )
