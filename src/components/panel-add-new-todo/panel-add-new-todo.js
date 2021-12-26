@@ -17,6 +17,7 @@ class PanelAddNewTodo extends Component {
 
     onAddClick = (e) => {
         e.preventDefault();
+        if(this.state.text === '' || this.state.text.length < 2)return;
         this.props.onAddNewTodo(this.state.text);
         this.setState({
             text : ''
